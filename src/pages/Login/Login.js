@@ -4,16 +4,19 @@ import { UserOutlined, LockOutlined, BookOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
 
+const setToken = (value) => {
+  localStorage.setItem("token", value);
+  return;
+};
+
 export function Login() {
   const navigate = useNavigate();
   const [isShowAlert, showAlert] = useState(false);
 
   const onFinish = (values) => {
     const { username, password } = values;
-
-    console.log("Received values of form: ", username, password);
     if (username === "admin" && password === "123456") {
-      localStorage.setItem("token", "token_access");
+      setToken("token_access");
       return navigate("/books");
     } else showAlert(true);
   };

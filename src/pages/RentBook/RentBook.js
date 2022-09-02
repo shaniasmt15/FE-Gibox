@@ -1,5 +1,5 @@
 import React from "react";
 
-export function Rent() {
+export function RentBook() {
   return <div className="rent">rent book</div>;
 }

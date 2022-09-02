@@ -1,0 +1,45 @@
+.layout {
+    height: 100vh;
+    width: 100%;
+}
+
+.logo {
+    color: #fff;
+    font-size: 20px;
+    padding: 16.4px;
+    background: #142666;
+}
+
+.ant-layout-sider-zero-width-trigger {
+    top: 10px !important;
+    right: -50px !important;
+    font-size: 24px !important;
+    background: transparent !important;
+    color: #fff !important;
+}
+
+.ant-layout-header {
+    background: #4087E3 !important;
+    color: #ffff !important;
+    font-size: 20px !important;
+}
+
+.header-rigt {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.header-rigt-item {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.header-rigt-item .text {
+    font-size: 16px;
+}
+
+.header-rigt-item .anticon-bell {
+    color: #fff;
+    font-size: 20px
+}

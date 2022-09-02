@@ -1,12 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { RouteGuard } from "./utils/RouteGuard";
-import { Login, Books, Students, Rent, NotFound } from "./pages";
-import MainLayout from "./Components/Layout/Layout";
+import { RouteGuard } from "./RouteGuard";
+import { Login, Books, RentBook, Students, NotFound } from "./pages";
+import MainLayout from "./layout/MainLayout";
 
 function App() {
   return (
-    <div className="App">
+    <Fragment>
       <Routes>
         <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
@@ -28,17 +28,17 @@ function App() {
             }
           />
           <Route
-            path="/rent"
+            path="/rent_book"
             element={
               <MainLayout>
-                <Rent />
+                <RentBook />
               </MainLayout>
             }
           />
           <Route path="/*" element={<NotFound />} />
         </Route>
       </Routes>
-    </div>
+    </Fragment>
   );
 }
 
