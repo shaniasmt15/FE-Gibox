@@ -60,11 +60,6 @@ export default function CreateBook(props) {
             <Input placeholder="Year" />
           </Space>
         </Form.Item>
-        <Form.Item>
-          <Button type="primary" htmlType="submit" block>
-            Create
-          </Button>
-        </Form.Item>
         
         <Form.Item
           name="desc"
@@ -80,11 +75,6 @@ export default function CreateBook(props) {
             <Input placeholder="Desc" />
           </Space>
         </Form.Item>
-        <Form.Item>
-          <Button type="primary" htmlType="submit" block>
-            Create
-          </Button>
-        </Form.Item>
 
         <Form.Item
           name="img"
@@ -99,11 +89,6 @@ export default function CreateBook(props) {
             Img
             <Input placeholder="Img" />
           </Space>
-        </Form.Item>
-        <Form.Item>
-          <Button type="primary" htmlType="submit" block>
-            Create
-          </Button>
         </Form.Item>
 
         <Form.Item

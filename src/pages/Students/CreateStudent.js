@@ -26,6 +26,7 @@ export default function CreateStudent(props) {
       onOk={() => setShowModalStudent(false)}
       onCancel={() => setShowModalStudent(false)}
       width={275}
+      footer={null}
     >
       <Form onFinish={onFinish}>
         <Form.Item

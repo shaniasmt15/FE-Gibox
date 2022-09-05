@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import { Layout, Menu, Badge, Popover, Alert } from "antd";
 import {
   UserOutlined,
@@ -11,7 +11,6 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./layout.css";
 
 const { Header, Sider, Content } = Layout;
-
 const setToken = (value) => {
   localStorage.setItem("token", value);
   return;
@@ -23,6 +22,7 @@ export default function MainLayout(props) {
   const location = useLocation();
 
   const [collapsed, setCollapsed] = useState(false);
+
   const menuItems = [
     {
       key: "students",
@@ -58,22 +58,17 @@ export default function MainLayout(props) {
     navigate("/login");
   };
 
-  useEffect(() => {}, [location]);
+  useEffect(() => { }, [location]);
 
-  const contentNotifications = (
-    <div>
+  const ContentNotifications = () => {
+    return (
       <Alert
         message="Rendra"
         description="Pengembalian buku telat 3 hari total denda Rp 15.000.-"
         type="info"
       />
-      <Alert
-        message="Budi"
-        description="Pengembalian buku telat 4 hari total denda Rp 20.000.-"
-        type="info"
-      />
-    </div>
-  );
+    )
+  }
 
   return (
     <Layout className="layout">
@@ -111,10 +106,10 @@ export default function MainLayout(props) {
                 <Popover
                   placement="bottomRight"
                   title="notifications"
-                  content={contentNotifications}
+                  content={<ContentNotifications />}
                   trigger="click"
                 >
-                  <Badge count={8} size="small">
+                  <Badge count={1} size="small">
                     <BellOutlined />
                   </Badge>
                 </Popover>

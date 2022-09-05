@@ -58,7 +58,11 @@ export function Books() {
               <Column title="Name" dataIndex="name" key="name" />
               <Column title="Year" dataIndex="year" key="year" />
               <Column title="Desc" dataIndex="desc" key="desc" />
-              <Column title="Img" dataIndex="img" key="img" />
+              <Column title="Img" dataIndex="img" key="img" render={(image) => {
+                return(
+                  <img alt={image} src={image} width={150}/>
+                )
+              }} />
               <Column title="Author" dataIndex="author" key="author" />
               <Column
                 title="Action"

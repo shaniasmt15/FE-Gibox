@@ -2,6 +2,10 @@
 
 # Shania Shamanta
 
+### Log In :
+username: admin <br />
+password: 123456
+
 ### UI Library : <br/>
 antDesign: https://ant.design/
 

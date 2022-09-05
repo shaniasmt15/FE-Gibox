@@ -34,6 +34,7 @@ export default function EditStudent(props) {
       onOk={() => setShowModalStudent(false)}
       onCancel={() => setShowModalStudent(false)}
       width={275}
+      footer={null}
     >
       {student && (
         <Form onFinish={onFinish}>
@@ -51,7 +52,7 @@ export default function EditStudent(props) {
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit" block>
-              Create
+              Save Edit
             </Button>
           </Form.Item>
         </Form>
